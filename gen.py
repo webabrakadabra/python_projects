@@ -8,6 +8,13 @@ UPPERCASE_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 PUNCTUATION = '!#$%&*+-=?@^_'
 
 chars = ''
+
+def passw_number():
+    while True:
+        passw_number = int(input('Введите количество паролей для генерации: '))
+        if passw_number.isdigit and int(passw_number) > 0:
+            return int(passw_number)
+
 passw_number = int(input('Введите количество паролей для генерации: '))
 passw_len = int(input('Введите длину одного пароля: '))
 passw_is_digit = input('Включать ли цифры 0123456789 ? Y - да, N - нет: ')
