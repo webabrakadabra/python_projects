@@ -96,14 +96,12 @@ def symbols():
 
     return chars
 
-def generate_password(c, a, b):
-    while c > 0:
+def generate_password(passw_number, passw_len, symbols):
+    for _ in range(passw_number):
         passw = ''
-        while a > 0:
-            passw += random.choice(b)
-            a -= 1
+        for _ in range(passw_len):
+            passw += random.choice(symbols)
         print(passw)
-        c -= 1
 
 generate_password(passw_number(),passw_len(), symbols())
 
