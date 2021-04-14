@@ -25,11 +25,11 @@ def encrypt(lang, key, string):
         for i in range(len(string)):
             x = ord(string[i])
             if 65 <= x <= 90:
-                x = ((x - 65) + key) % 25
+                x = ((x - 65) + key) % 26
                 newstring += chr(x + 65)
                 #print(x)
             elif 97 <= x <= 122:
-                x = ((x - 97) + key) % 25
+                x = ((x - 97) + key) % 26
                 newstring += chr(x + 97)
                 #print(newstring)
             else:
@@ -45,4 +45,4 @@ def decrypt(lang, key, string):
     
 
 
-encrypt('R', 8, 'Щ')
+encrypt('E', 17, 'To be, or not to be, that is the question!')
