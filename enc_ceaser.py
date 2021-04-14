@@ -22,7 +22,19 @@ def encrypt(lang, key, string):
         print(newstring)
             
     elif lang == 'E':
-        pass
+        for i in range(len(string)):
+            x = ord(string[i])
+            if 65 <= x <= 90:
+                x = ((x - 65) + key) % 25
+                newstring += chr(x + 65)
+                #print(x)
+            elif 97 <= x <= 122:
+                x = ((x - 97) + key) % 25
+                newstring += chr(x + 97)
+                #print(newstring)
+            else:
+                newstring += chr(x)
+        print(newstring)
     else:
         print('Укажите язык алфавита!!! R - русский, E - английский')
 
@@ -33,4 +45,4 @@ def decrypt(lang, key, string):
     
 
 
-encrypt('R', 10, 'Блажен, кто верует, тепло ему на свете!')
+encrypt('E', 6, 'To be, or not to be, that is the question!')
