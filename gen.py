@@ -2,13 +2,6 @@
 
 import random
 
-DIGITS  = '0123456789'
-LOWERCASE_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
-UPPERCASE_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-PUNCTUATION = '!#$%&*+-=?@^_'
-
-
-
 def passw_number():
     while True:
         passw_number = input('Введите количество паролей для генерации: ')

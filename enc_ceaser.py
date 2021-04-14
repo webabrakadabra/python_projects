@@ -45,4 +45,4 @@ def decrypt(lang, key, string):
     
 
 
-encrypt('E', 6, 'To be, or not to be, that is the question!')
+encrypt('R', 8, 'Щ')
