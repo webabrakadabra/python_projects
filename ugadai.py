@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+import random
+
+word_list = ['кабан', 'крякозябла','кондуктор']
+
+def ret(val):
+    return random.choice(val).upper()
+
 def display_hangman(tries):
     stages = [  # финальное состояние: голова, торс, обе руки, обе ноги
                 '''
@@ -74,3 +81,6 @@ def display_hangman(tries):
     ]
     return stages[tries]
 
+def play(word):
+    pass
+print(ret(word_list))
